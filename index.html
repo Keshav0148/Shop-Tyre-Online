@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajdhani Tyres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vibur&display=swap"
+        rel="stylesheet">
+    <style>
+        /* .nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navbar-height: 80px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            margin-top: 0px;
+            /* background-color: white; */
+            width: 100%;
+            height: var(--navbar-height);
+            /* border: 5px solid rgb(82, 177, 142);   */
+        }
+
+        
+
+        #logo {
+            margin: 10px 10px;
+        }
+
+        #logo img {
+            padding: 5px 5px;
+            height: 70px;
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .log-in{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 330px;
+        }
+        .sign-up{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 5px;
+            margin: 10px;
+            color: black;
+            font-size: 1.7rem;
+        }
+
+        #navbar ul li a:hover {
+            /* border-radius: 20px; */
+            /* border: 2px solid rgb(186, 186, 217); */
+            text-decoration: underline;
+            color: white;
+            
+
+            /* background-color: gainsboro; */
+        }
+
+        #home {
+            /* margin-top:200px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 20px;
+            height: 640px;
+        }
+
+        #home::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: url(tyre.avif) no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            /* opacity: 0.9; */
+        }
+
+
+        #home #heading {
+            margin-top: -160px;
+            text-align: centre;
+            font-weight: bold;
+            font-size: 2rem;
+
+        }
+
+        #home #address {
+            margin-top:0px;
+            text-align: center;
+            font-size: 1.3rem;
+            align-items: center;
+        }
+
+        #home #btn {
+            border-radius: 10px;
+            padding: 5px 10px;
+            width: 25%;
+            border: 2px solid black;
+            font-size: 1.1rem;
+        }
+
+        #ourservices {
+            height: 640px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(214, 214, 230);
+            border: 5px solid grey;
+            margin: 100px 300px;
+            border-radius: 50px;
+            /* margin-left: 200px; */
+        }
+
+        #services {
+            /* margin: 5px; */
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 15px;
+
+        }
+
+        /* #services::before {
+            content: "";
+            height: 640px;
+            width: 100%;
+            background: url(grey.jpg) no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            opacity: 1;
+            top: 640px;
+            left: 0px;
+        } */
+
+        .item {
+            padding: 10px;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 1.1rem;
+        }
+
+        #social-media {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 300px;
+        }
+
+        #boxes {
+            display: flex;
+        }
+
+        .cont {
+            padding: 10px 30px;
+            margin: 20px 5px;
+        }
+
+        .cont img {
+            height: 100px;
+        }
+
+        .head {
+            margin-left: 250px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid rgba(0, 0, 0, 0.157);
+            margin: 50px 200px;
+            border-radius: 20px;
+            background-color: rgb(178, 177, 177);
+
+
+        }
+
+        #contact-box {
+            margin: 20px;
+            padding: 10px;
+
+        }
+
+        .form-group {
+            margin: 10px;
+            width: 50%;
+
+        }
+        label{
+            font-size: 1.5rem;
+        }
+        .h-primary{
+            font-size: 2rem;
+        }
+        input{
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky" id="navbar">
+        <div id="logo">
+            <img src="logo.jpeg" alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#ourservices">Our services</a></li>
+            <li class="item"><a href="#social-media">Social media</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="log-in">Log-in</div>
+        <div class="sign-up">sign-up</div>
+    </nav>
+    <section id="home">
+        <h1 id="heading">Welcome to Rajdhani Tyres</h1>
+        <div id="address">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nihil nobis commodi consequuntur
+                accusamus facilis ex ducimus modi porro expedita atque, minus earum possimus, quibusdam dolor sapiente
+                officia? Laboriosam quidem quis beatae repudiandae illo veniam?</p>
+        </div>
+        <button id="btn">Buy now</button>
+    </section>
+
+    <section id="ourservices">
+        <h1 id="services">Our Services</h1>
+        <form action="">
+            <div class="item">
+                <label for="cars" placeholder="click to select">Select wheeler:</label>
+                <select name="cars" id="cars" required>
+                    <option value="" disabled selected hidden>Click to select</option>
+                    <option value="2-wheeler">2-wheeler</option>
+                    <option value="3-wheeler">3-wheeler</option>
+                    <option value="4-wheeler">4-wheeler</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="cars">Select company:</label>
+                <select name="cars" id="cars" placeholder="click to select">
+                    <option value="" disabled selected hidden>Click to select</option>
+                    <option value="MRF">MRF</option>
+                    <option value="Apollo">Apollo</option>
+                    <option value="CEAT">CEAT</option>
+                    <option value="Bridgestone">Bridgestone</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="cars" placeholder="click to select">Select car company:</label>
+                <select name="cars" id="cars" placeholder="click to select">
+                    <option value="" disabled selected hidden>Click to select</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Porche">Porche</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="cars" placeholder="click to select">Select tyre size:</label>
+                <select name="cars" id="cars" required>
+                    <option value="" disabled selected hidden>Click to select</option>
+                    <option value="15inch">15inch</option>
+                    <option value="16inch">16inch</option>
+                    <option value="17inch">17inch</option>
+                    <option value="18inch">18inch</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="cars" placeholder="click to select">Select no. of pieces:</label>
+                <select name="cars" id="cars" required>
+                    <option value="" disabled selected hidden>Click to select</option>
+                    <option value="1-pieces">1-pieces</option>
+                    <option value="2-pieces">2-pieces</option>
+                    <option value="3-pieces">3-pieces</option>
+                    <option value="4-pieces">4-pieces</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn">Submit</button>
+                <button class="btn">Order now</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="social-media">
+        <h1 class="head">
+            Social Media
+        </h1>
+        <div id="boxes">
+            <div class="cont">
+                <img src="whatsapp.png" alt="">
+            </div>
+            <div class="cont">
+                <img src="twitter.png" alt="">
+            </div>
+            <div class="cont">
+                <img src="instagram.jpeg" alt="">
+            </div>
+            <div class="cont">
+                <img src="Telegram.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="name" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number:</label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <textarea name="name" id="feedback" cols="30" rows="10" placeholder="Type here..."></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
